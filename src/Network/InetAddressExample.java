@@ -50,7 +50,18 @@ public class InetAddressExample {
                 out.print(((ipAddress[b] < 0) ? ipAddress[b] + 256 : ipAddress[b]) + ".");
             }
 
+            out.println("\n");
+            out.println("-----------------------------------------");
             out.println();
+
+            out.println("getLocalHost Method 로 InetAddress 객체 생성 호출");
+            InetAddress local = InetAddress.getLocalHost();
+            out.println("내 컴퓨터 IP : " + local);
+
+            out.println();
+            out.println("-----------------------------------------");
+            out.println();
+
         } catch (UnknownHostException e) {
             out.println("알 수 없는 호스트입니다.");
             out.println(e.getMessage());

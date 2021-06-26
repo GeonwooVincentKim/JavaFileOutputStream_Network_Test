@@ -62,6 +62,10 @@ public class InetAddressExample {
             out.println("-----------------------------------------");
             out.println();
 
+            out.println("getByAddress Method 로 InetAddress 객체 생성 호출");
+            InetAddress ip2 = InetAddress.getByAddress(ips[0].getAddress());
+            out.println(ips[0].getHostAddress() + " 주소 : " + ip2);
+
         } catch (UnknownHostException e) {
             out.println("알 수 없는 호스트입니다.");
             out.println(e.getMessage());

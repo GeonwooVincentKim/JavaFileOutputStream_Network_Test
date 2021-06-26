@@ -26,6 +26,22 @@ public class InetAddressExample {
             out.println("IP : " + getCurrentIPAddress.getHostAddress());
 
             out.println();
+            out.println("-----------------------------------------");
+            out.println();
+
+            out.println("접속하고자 하는 사이트의 IP 주소 Array(배열)");
+
+            InetAddress[] ips = InetAddress.getAllByName("www.google.co.kr");
+            out.println(ips);
+
+            for (InetAddress i : ips) {
+                out.println("IP 주소 : " + i);
+            }
+
+            out.println();
+            out.println("-----------------------------------------");
+            out.println();
+
         } catch (UnknownHostException e) {
             out.println("알 수 없는 호스트입니다.");
             out.println(e.getMessage());

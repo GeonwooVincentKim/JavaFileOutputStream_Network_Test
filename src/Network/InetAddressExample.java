@@ -42,6 +42,15 @@ public class InetAddressExample {
             out.println("-----------------------------------------");
             out.println();
 
+            out.println("IP 주소 값을 byte[] Array(배열)로 Return");
+
+            byte[] ipAddress = ip.getAddress();
+
+            for (byte b = 0; b < ipAddress.length; b++) {
+                out.print(((b < 0) ? b + 256 : b) + ".");
+            }
+
+            out.println();
         } catch (UnknownHostException e) {
             out.println("알 수 없는 호스트입니다.");
             out.println(e.getMessage());

@@ -12,6 +12,9 @@ public class InetAddressExample {
             InetAddress ip = InetAddress.getByName("www.google.co.kr");
             out.println(ip);
 
+            out.println("Host-Name : " + ip.getHostName());
+            out.println("IP : " + ip.getHostAddress());
+
             out.println();
             out.println("-----------------------------------------");
             out.println();
@@ -19,8 +22,10 @@ public class InetAddressExample {
             out.println("내 컴퓨터의 IP 주소");
 
             InetAddress getCurrentIPAddress = InetAddress.getLocalHost();
-            out.println(getCurrentIPAddress.getHostName());
-            out.println(getCurrentIPAddress.getHostAddress());
+            out.println("Host-Name : " + getCurrentIPAddress.getHostName());
+            out.println("IP : " + getCurrentIPAddress.getHostAddress());
+
+            out.println();
         } catch (UnknownHostException e) {
             out.println("알 수 없는 호스트입니다.");
             out.println(e.getMessage());

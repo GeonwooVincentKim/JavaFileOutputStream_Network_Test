@@ -46,8 +46,8 @@ public class InetAddressExample {
 
             byte[] ipAddress = ip.getAddress();
 
-            for (byte b = 0; b < ipAddress.length; b++) {
-                out.print(((b < 0) ? b + 256 : b) + ".");
+            for (int b = 0; b < ipAddress.length; b++) {
+                out.print(((ipAddress[b] < 0) ? ipAddress[b] + 256 : ipAddress[b]) + ".");
             }
 
             out.println();

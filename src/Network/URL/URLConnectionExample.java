@@ -38,7 +38,18 @@ public class URLConnectionExample {
             out.println();
 
             out.println("getAllowUserInteraction() : " + conn.getAllowUserInteraction());
+            out.println("getConnectTimeout() : " + conn.getConnectTimeout());
+            out.println("getContent() : " + conn.getContent());
+            out.println("getContentEncoding() : " + conn.getContentEncoding());
+            out.println("getContentLength() : " + conn.getContentLength());
+            out.println("getContentType() : " + conn.getContentType());
 
+            out.println();
+
+            out.println("getDate() : " + conn.getDate());
+            // out.println("getDefaultAllowUserInteraction() : " +
+            // conn.getDefaultAllowUserInteraction());
+            out.println("getDefaultAllowUserInteraction() : " + URLConnection.getDefaultAllowUserInteraction());
         } catch (Exception e) {
             e.printStackTrace();
         }

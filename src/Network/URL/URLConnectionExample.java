@@ -57,7 +57,17 @@ public class URLConnectionExample {
 
             out.println("getExpiration() : " + conn.getExpiration());
             out.println("getHeaderFields() : " + conn.getHeaderFields());
+            out.println("getIfModifiedSince() : " + conn.getIfModifiedSince());
+            out.println("getLastModified() : " + conn.getLastModified());
+
+            out.println();
+
+            out.println("getReadTimeOut() : " + conn.getReadTimeout());
+            out.println("getURL() : " + conn.getURL());
+            out.println("getUseCaches() : " + conn.getUseCaches());
         } catch (Exception e) {
+            out.println(e.getMessage());
+            out.println("----------------------------------");
             e.printStackTrace();
         }
     }

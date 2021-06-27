@@ -20,7 +20,7 @@ public class ServerExample {
 
         try {
 
-            server = new ServerSocket(9999);
+            server = new ServerSocket(9998);
 
             // 무한 반복 (클라이언트 접속 대기)
             while (true) {

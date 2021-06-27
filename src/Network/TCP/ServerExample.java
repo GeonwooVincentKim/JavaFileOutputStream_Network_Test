@@ -9,6 +9,8 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import static java.lang.System.out;
+
 public class ServerExample {
 
     public static void main(String[] args) {
@@ -60,6 +62,8 @@ class HttpThread extends Thread {
     public void run() {
         BufferedReader fbr = null;
         DataOutputStream outToClient = null;
+        out.println(outToClient);
+
         try {
             String line = br.readLine();
             // line : GET / HTTP/1.1

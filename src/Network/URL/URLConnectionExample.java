@@ -33,6 +33,12 @@ public class URLConnectionExample {
 
             URLConnection conn = url.openConnection();
             out.println(conn);
+            out.println("conn.toString() : " + conn);
+
+            out.println();
+
+            out.println("getAllowUserInteraction() : " + conn.getAllowUserInteraction());
+
         } catch (Exception e) {
             e.printStackTrace();
         }

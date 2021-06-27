@@ -50,6 +50,13 @@ public class URLConnectionExample {
             // out.println("getDefaultAllowUserInteraction() : " +
             // conn.getDefaultAllowUserInteraction());
             out.println("getDefaultAllowUserInteraction() : " + URLConnection.getDefaultAllowUserInteraction());
+            out.println("getDefaultUseCaches() : " + conn.getDefaultUseCaches());
+            out.println("getDoInput() : " + conn.getDoInput());
+
+            out.println();
+
+            out.println("getExpiration() : " + conn.getExpiration());
+            out.println("getHeaderFields() : " + conn.getHeaderFields());
         } catch (Exception e) {
             e.printStackTrace();
         }

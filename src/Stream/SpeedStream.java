@@ -3,6 +3,7 @@ package Stream;
 import static java.lang.System.out;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 // import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -41,5 +42,17 @@ public class SpeedStream {
         List<String> list = convertArrayToList(arrays);
         out.println(list);
 
+        int listSize = list.size();
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < listSize; i++) {
+            out.println(list);
+        }
+
+        long end = System.currentTimeMillis();
+        out.println((end - start) + "ms");
+
+        Iterator<String> it = list.iterator();
+        out.println(it);
     }
 }

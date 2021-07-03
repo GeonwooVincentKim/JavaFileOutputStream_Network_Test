@@ -11,6 +11,8 @@ import java.net.Socket;
 
 import static java.lang.System.out;
 
+import static java.lang.System.in;
+
 public class ServerExample {
 
     public static void main(String[] args) {

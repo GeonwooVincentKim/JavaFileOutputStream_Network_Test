@@ -54,5 +54,20 @@ public class SpeedStream {
 
         Iterator<String> it = list.iterator();
         out.println(it);
+
+        start = System.currentTimeMillis();
+
+        while (it.hasNext()) {
+            out.println(it.next());
+        }
+
+        end = System.currentTimeMillis();
+        out.println((end - start) + "ms");
+
+        start = System.currentTimeMillis();
+        list.stream().forEach(s -> out.println(s));
+        end = System.currentTimeMillis();
+
+        out.println((end - start) + "ms");
     }
 }

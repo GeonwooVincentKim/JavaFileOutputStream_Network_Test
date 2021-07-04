@@ -22,6 +22,14 @@ public class TestStream {
         // IntStream intStream = new Random(numberLength);
         // list.stream().forEach(getValue -> list.add((int) (Math.random() * (50 - 10 +
         // 1)) + 10));
+        // IntStream stream = list.stream().flatMap(data -> {
+
+        // });
+        // Integer getNumberLength = Integer.valueOf(numberLength);
+
+        // list.stream().forEach(getNumberLength -> {
+        // out.print(list + " ");
+        // });
 
         return list;
     }
@@ -42,6 +50,7 @@ public class TestStream {
 
         List<Integer> calculateArray = calculator(userInputLength);
         // out.println(calculateArray);
+        out.println();
 
         String result = printResult(calculateArray);
         out.println(result);

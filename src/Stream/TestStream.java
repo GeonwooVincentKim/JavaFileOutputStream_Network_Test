@@ -1,13 +1,14 @@
 package Stream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 // import java.util.Arrays;
 // import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.IntStream;
-// import java.util.stream.Stream;
+import java.util.stream.Stream;
 
 import static java.lang.System.out;
 
@@ -33,10 +34,29 @@ public class TestStream {
         return list;
     }
 
+    public static int[] calculatorArray(int numberLength) {
+        int[] array = new int[numberLength];
+
+        //
+        Stream<Integer> stream = Arrays.stream(array).mapToObj(a -> array.length);
+        stream.mapToInt(a -> (int) (Math.random() * (50 - 10 + 1)) + 10);
+
+        return array;
+    }
+
     public static String printResult(List<Integer> getCalculateArray) {
         String result = "";
 
         getCalculateArray.stream().forEach(string -> out.print(string + " "));
+
+        return result;
+    }
+
+    public static String printResult(int[] calculateArray) {
+        String result = "";
+
+        Stream<Integer> stream = Arrays.stream(calculateArray).mapToObj(a -> calculateArray.length);
+        stream.forEach(string -> out.print(string + " "));
 
         return result;
     }
@@ -47,7 +67,8 @@ public class TestStream {
 
         int userInputLength = sc.nextInt();
 
-        List<Integer> calculateArray = calculator(userInputLength);
+        // List<Integer> calculateArray = calculator(userInputLength);
+        int[] calculateArray = calculatorArray(userInputLength);
         // out.println(calculateArray);
         // out.println();
 
